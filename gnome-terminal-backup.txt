@@ -1,0 +1,6 @@
+[legacy/keybindings]
+close-tab='<Alt>z'
+new-tab='<Alt>Return'
+new-window='<Alt>n'
+next-tab='<Alt>d'
+prev-tab='<Alt>a'
