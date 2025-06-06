@@ -4,3 +4,11 @@ new-tab='<Alt>Return'
 new-window='<Alt>n'
 next-tab='<Alt>d'
 prev-tab='<Alt>a'
+toggle-menubar='<Primary>grave'
+zoom-in='<Primary>equal'
+zoom-out='<Primary>minus'
+
+[legacy/profiles:/:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+cell-width-scale=1.0
+font='MesloLGS NF 10'
+use-system-font=false
