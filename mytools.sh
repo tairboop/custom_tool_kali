@@ -264,7 +264,20 @@ mejorarZSH(){
 	configure_zshrc
 	mensaje_final
 }
+
+focus_mouse(){
+	if gsettings set org.gnome.desktop.wm.preferences focus-mode 'sloppy'; then
+	    echo -e  "${GREEN}Configuración aplicada correctamente.${NC}"
+	else
+	    echo -e  "${RED}Error al aplicar la configuración.${NC}" >&2
+	    exit 1
+	fi
+}
 ###############################
+#################################
+######################################
+###############################################
+##################################################
 
 # Función para mostrar el menú
 show_menu() {
@@ -279,6 +292,7 @@ show_menu() {
     echo -e "4) ${YELLOW}Exportar configuración terminal${NC}"
     echo -e "5) ${YELLOW}Restaurar configuración terminal${NC}"
     echo -e "6) ${YELLOW}Mejorar zsh + oh_my_zsh + power_level_10k${NC}"
+    echo -e "7) ${YELLOW}focus follows mouse(seguimiento de mouse)${NC}"
     echo -e "0) ${RED}Salir${NC}"
     echo -e "${BLUE}___________________________________________________${NC}"
 }
@@ -294,6 +308,7 @@ while true; do
         4) export_terminal ;;
         5) restore_terminal ;;
         6) mejorarZSH ;;
+        7) focus_mouse ;;
         0) 
             echo -e "${RED}Saliendo...${NC}"
             echo -e "${GREEN}Reinicia el sistema si restauro(recomendado).${NC}"
